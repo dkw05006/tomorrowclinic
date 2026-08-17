@@ -104,6 +104,14 @@
      눌린다. 자동 배분에 맡긴다. */
   th[style*="width"], td[style*="width"] { width: auto !important; }
 
+  /* --- 문단 높이 고정 해제 ------------------------------------------------
+     디자인 툴에서 핸들을 끌어 문단에 height 가 박힌 곳이 있다
+     (checkup.html 의 "개인의 공단검진 대상…" 문단, height:80px).
+     데스크톱에서는 3줄이라 들어맞지만 모바일에서는 7줄로 늘어나
+     상자 밖으로 넘쳐 아래 "중요 안내" 상자와 겹친다.
+     문단에 고정 높이가 필요한 경우는 없으므로 전부 auto 로 되돌린다. */
+  p[style] { height: auto !important; }
+
   /* --- 타이포 ------------------------------------------------------------ */
   h1[style] { font-size: 26px !important; line-height: 1.4 !important; }
   h2[style] { font-size: 19px !important; line-height: 1.5 !important; }
