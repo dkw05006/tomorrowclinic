@@ -73,12 +73,10 @@
   }
 
   /* --- 메인 히어로 사진 패널 --------------------------------------------
-     데스크톱에서 611px 로 고정되어 있어 모바일에서는 화면을 다 덮어버린다 */
-  [style*="height: 611px"] {
-    height: 240px !important;
-    width: auto !important;
-    min-width: 0 !important;
-  }
+     높이는 index.html 인라인의 min-height 가 담당한다(미디어쿼리 밖이라
+     줄바꿈이 일어나는 모든 폭에서 확실히 적용된다). 여기서는 아주 좁은
+     화면에서 min-width:320px 가 화면을 밀어내지 않도록만 푼다. */
+  [style*="team-photo-new.jpg"] { min-width: 0 !important; }
 
   /* 인증서·CT실 등 큰 사진의 고정 높이도 낮춘다 */
   [style*="height: 420px"] { height: 240px !important; }
